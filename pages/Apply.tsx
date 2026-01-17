@@ -59,6 +59,8 @@ const Apply: React.FC = () => {
     );
   }
 
+  const labelStyle = "text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold block mb-2";
+
   return (
     <div className="pt-48 md:pt-64 pb-32 px-6 bg-[#0D110E]">
       <div className="container mx-auto max-w-4xl">
@@ -70,50 +72,52 @@ const Apply: React.FC = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-20 md:space-y-24">
-          <div className="space-y-8">
-            <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">Identity</label>
+        <form onSubmit={handleSubmit} className="space-y-20 md:space-y-28">
+          {/* Full Name Section */}
+          <div className="space-y-4">
+            <label className={labelStyle}>Your Full Name</label>
             <input 
               name="fullName"
               required
               type="text" 
-              className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all placeholder:text-neutral-800 text-[#E5E7E4] text-3xl font-serif italic"
-              placeholder="Your Full Name"
+              className="w-full bg-transparent border-b border-white/10 py-6 focus:outline-none focus:border-[#94A187] transition-all placeholder:text-neutral-800 text-[#E5E7E4] text-3xl font-serif italic"
+              placeholder=""
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div className="space-y-8">
-              <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">Digital Reach</label>
+          {/* Email and Chapter Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-24">
+            <div className="space-y-4">
+              <label className={labelStyle}>Email Address</label>
               <input 
                 name="email"
                 required
                 type="email" 
-                placeholder="Email Address"
-                className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all text-[#E5E7E4] text-xl font-light italic"
+                placeholder=""
+                className="w-full bg-transparent border-b border-white/10 py-6 focus:outline-none focus:border-[#94A187] transition-all text-[#E5E7E4] text-xl font-light italic"
               />
             </div>
-            <div className="space-y-8">
-              <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">Chapter</label>
-              <select name="chapter" className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all appearance-none text-[#E5E7E4] text-xl font-light italic cursor-pointer">
-                <option value="boston" className="bg-[#0D110E]">Boston Chapter</option>
-                <option value="global" className="bg-[#0D110E]">Global Nomadic / Waitlist</option>
+            <div className="space-y-4">
+              <label className={labelStyle}>Chapter</label>
+              <select name="chapter" className="w-full bg-transparent border-b border-white/10 py-6 focus:outline-none focus:border-[#94A187] transition-all appearance-none text-[#E5E7E4] text-xl font-light italic cursor-pointer">
+                <option value="boston" className="bg-[#0D110E]">Boston</option>
               </select>
             </div>
           </div>
 
-          <div className="space-y-8">
-            <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">What are you most wanting to get out of Thrive House?</label>
+          {/* Motivation Section */}
+          <div className="space-y-6">
+            <label className={labelStyle}>What are you most wanting to get out of Thrive House?</label>
             <textarea 
               name="motivation"
               required
-              rows={6}
-              className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all resize-none text-[#E5E7E4] text-2xl font-light leading-relaxed italic"
+              rows={4}
+              className="w-full bg-transparent border-b border-white/10 py-6 focus:outline-none focus:border-[#94A187] transition-all resize-none text-[#E5E7E4] text-2xl font-light leading-relaxed italic"
               placeholder="Share your intentions..."
             ></textarea>
           </div>
 
-          <div className="pt-20">
+          <div className="pt-10">
             <button 
               disabled={status === 'submitting'}
               type="submit" 
