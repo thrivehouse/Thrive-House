@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 
 /**
  * GOOGLE SHEETS INTEGRATION ACTIVATED
- * URL: https://script.google.com/macros/s/AKfycbypeQJ7ZeLOTJV-Ig8KB3TiPoyP7VIqtG1-S0DXtZUfmkYeW2lAWlfftFcEuT0hLpo3dQ/exec
  */
-// Explicitly typed as string to resolve comparison overlap error with placeholder
 const GOOGLE_SHEET_URL: string = 'https://script.google.com/macros/s/AKfycbypeQJ7ZeLOTJV-Ig8KB3TiPoyP7VIqtG1-S0DXtZUfmkYeW2lAWlfftFcEuT0hLpo3dQ/exec';
 
 const Apply: React.FC = () => {
@@ -23,7 +21,6 @@ const Apply: React.FC = () => {
     };
 
     try {
-      // Comparison is now valid between string and string literal
       if (GOOGLE_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
         await fetch(GOOGLE_SHEET_URL, {
           method: 'POST',
@@ -34,7 +31,6 @@ const Apply: React.FC = () => {
           },
         });
       } else {
-        // Simulation for development
         await new Promise(resolve => setTimeout(resolve, 2000));
       }
       setStatus('submitted');
@@ -52,7 +48,7 @@ const Apply: React.FC = () => {
           <span className="text-[#94A187] text-[10px] font-medium tracking-[0.6em] uppercase mb-12 block">Confirmation</span>
           <h1 className="text-7xl md:text-9xl font-serif mb-12 italic text-[#E5E7E4] leading-[0.8] tracking-tight">Presence.</h1>
           <p className="text-neutral-400 font-light leading-relaxed text-2xl mb-20">
-            Thank you for your inquiry. We review every application personally to protect the integrity of the room. Expect a response within seven days.
+            Thank you for your inquiry. We personally review every application based on alignment and availability to protect the integrity of the room.
           </p>
           <div className="w-24 h-[1px] bg-[#94A187]/30 mx-auto mb-20"></div>
           <p className="text-neutral-600 text-[11px] tracking-[0.4em] uppercase font-bold">
@@ -70,7 +66,7 @@ const Apply: React.FC = () => {
           <span className="text-[#94A187] text-[10px] font-medium tracking-[0.6em] uppercase mb-8 block">Application</span>
           <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-serif mb-12 italic text-[#E5E7E4] leading-[0.8] tracking-tight">Apply.</h1>
           <p className="text-neutral-500 font-light leading-relaxed text-xl max-w-2xl">
-            We prioritize curiosity, contribution, and character. Tell us how you intend to spend your evenings in our sanctuary.
+            We prioritize curiosity, contribution, and character. Tell us how you intend to spend your evenings within our society.
           </p>
         </div>
 
@@ -100,42 +96,20 @@ const Apply: React.FC = () => {
             <div className="space-y-8">
               <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">Chapter</label>
               <select name="chapter" className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all appearance-none text-[#E5E7E4] text-xl font-light italic cursor-pointer">
-                <option value="london" className="bg-[#0D110E]">London</option>
-                <option value="new-york" className="bg-[#0D110E]">New York</option>
-                <option value="berlin" className="bg-[#0D110E]">Berlin</option>
-                <option value="austin" className="bg-[#0D110E]">Austin</option>
-                <option value="other" className="bg-[#0D110E]">Global Nomadic</option>
+                <option value="boston" className="bg-[#0D110E]">Boston Chapter</option>
+                <option value="global" className="bg-[#0D110E]">Global Nomadic / Waitlist</option>
               </select>
             </div>
           </div>
 
           <div className="space-y-8">
-            <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">What does a meaningful social night look like to you?</label>
+            <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">What are you most wanting to get out of Thrive House?</label>
             <textarea 
-              name="meaningfulNight"
+              name="motivation"
               required
-              rows={4}
+              rows={6}
               className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all resize-none text-[#E5E7E4] text-2xl font-light leading-relaxed italic"
-            ></textarea>
-          </div>
-
-          <div className="space-y-8">
-            <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">What's one perspective you'd bring to a midnight salon?</label>
-            <textarea 
-              name="perspective"
-              required
-              rows={4}
-              className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all resize-none text-[#E5E7E4] text-2xl font-light leading-relaxed italic"
-            ></textarea>
-          </div>
-
-          <div className="space-y-8">
-            <label className="text-[11px] uppercase tracking-[0.5em] text-[#94A187] font-bold">How does waking up with absolute clarity change the way you live?</label>
-            <textarea 
-              name="clarityImpact"
-              required
-              rows={4}
-              className="w-full bg-transparent border-b border-white/10 py-8 focus:outline-none focus:border-[#94A187] transition-all resize-none text-[#E5E7E4] text-2xl font-light leading-relaxed italic"
+              placeholder="Share your intentions..."
             ></textarea>
           </div>
 

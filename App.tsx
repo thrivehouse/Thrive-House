@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -6,6 +7,7 @@ import About from './pages/About';
 import Experience from './pages/Experience';
 import Membership from './pages/Membership';
 import Apply from './pages/Apply';
+import Flyer from './pages/Flyer';
 import Footer from './components/Footer';
 
 const ScrollToTop = () => {
@@ -29,6 +31,7 @@ const App: React.FC = () => {
             <Route path="/experience" element={<Experience />} />
             <Route path="/membership" element={<Membership />} />
             <Route path="/apply" element={<Apply />} />
+            <Route path="/flyer" element={<Flyer />} />
           </Routes>
         </main>
         <Footer />

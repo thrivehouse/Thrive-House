@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               THRIVE <span className="text-[#94A187] font-medium italic">HOUSE</span>
             </div>
             <p className="text-neutral-500 font-light text-sm max-w-sm leading-relaxed">
-              An exclusive sanctuary for those who prioritize tomorrow. Strictly alcohol-free, curated connection in architectural silence.
+              A private evening society for those who prioritize tomorrow. Curated connection optimized for clarity and living fully.
             </p>
           </div>
 
@@ -70,22 +70,15 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <h4 className="text-[10px] tracking-[0.4em] uppercase font-bold text-white">Chapters</h4>
             <div className="flex flex-col gap-3">
-              <span className="text-neutral-600 text-[10px] tracking-widest uppercase">London</span>
-              <span className="text-neutral-600 text-[10px] tracking-widest uppercase">New York</span>
-              <span className="text-neutral-600 text-[10px] tracking-widest uppercase">Berlin</span>
-              <span className="text-neutral-600 text-[10px] tracking-widest uppercase">Austin</span>
+              <span className="text-neutral-400 text-[10px] tracking-widest uppercase border-b border-[#94A187]/20 pb-1 w-fit">Boston</span>
+              <span className="text-neutral-600 text-[10px] tracking-widest uppercase opacity-50">Expanding Globally</span>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 pt-20 border-t border-white/5">
-          <div className="flex space-x-12">
-            <a href="#" className="text-[10px] tracking-[0.4em] uppercase text-neutral-600 hover:text-[#94A187] transition-all font-bold">Instagram</a>
-            <a href="#" className="text-[10px] tracking-[0.4em] uppercase text-neutral-600 hover:text-[#94A187] transition-all font-bold">The Journal</a>
-          </div>
-
           <div className="text-[9px] tracking-[0.6em] uppercase text-neutral-700 font-bold">
-            © {new Date().getFullYear()} THRIVE HOUSE COLLECTIVE.
+            © {new Date().getFullYear()} THRIVE HOUSE.
           </div>
         </div>
       </div>
