@@ -56,7 +56,7 @@ const Home: React.FC = () => {
         
         <div className="relative z-10 text-center px-6 max-w-5xl pt-32 md:pt-40 animate-in fade-in slide-in-from-bottom-12 duration-[1200ms]">
           <span className="inline-block text-[#94A187] text-[10px] font-medium tracking-[0.5em] uppercase mb-10 py-1 border-b border-[#94A187]/30">
-            A Society for Intentional Evenings
+            A Member Club for Intentional Evenings
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-serif mb-12 leading-[0.9] tracking-tight text-[#E5E7E4] flex flex-col items-center">
             <span>Evenings for</span>
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
               <div className="space-y-4">
                 <Moon className="w-6 h-6 text-[#94A187]" />
                 <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Cadence</h4>
-                <p className="text-sm text-neutral-500 leading-relaxed font-light">Intimate gatherings held in private lofts and botanical studios. No crowds, no noise.</p>
+                <p className="text-sm text-neutral-500 leading-relaxed font-light">A monthly flagship gathering, complemented by intimate hosted salons and designed dinners throughout the season. Always limited. Always considered.</p>
               </div>
               <div className="space-y-4">
                 <ShieldCheck className="w-6 h-6 text-[#94A187]" />
@@ -125,12 +125,12 @@ const Home: React.FC = () => {
               },
               {
                 title: "Peer introductions",
-                desc: "Direct access to our directory of high-agency individuals. We believe your social circle is your most valuable asset.",
+                desc: "Direct access to a thoughtfully assembled community. We believe who you spend your time with shapes how you live.",
                 icon: Users
               },
               {
                 title: "The Society Table",
-                desc: "Member-hosted 'Certified' salons. We bring the guest list and elixirs to your home to foster intimacy in private spaces.",
+                desc: "Member-hosted 'Certified' salons. We bring the guest list and elixirs to your home to create meaningful connections in a personal setting.",
                 icon: HomeIcon
               }
             ].map((pillar, i) => (

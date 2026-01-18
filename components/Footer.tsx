@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            <h4 className="text-[10px] tracking-[0.4em] uppercase font-bold text-white">Join the Waitlist</h4>
+            <h4 className="text-[10px] tracking-[0.4em] uppercase font-bold text-white"></h4>
             <form 
               action={GOOGLE_SHEET_URL} 
               method="POST" 
@@ -55,16 +55,16 @@ const Footer: React.FC = () => {
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email address"
+                placeholder=""
                 required
-                className="bg-transparent border-b border-white/10 py-2 focus:outline-none focus:border-[#94A187] text-sm text-neutral-300 transition-all italic font-light"
+                className="bg-transparent py-2 focus:outline-none focus:border-[#94A187] text-sm text-neutral-300 transition-all italic font-light"
               />
               <button 
-                type="submit"
+                type=""
                 disabled={status !== 'idle'}
                 className="text-[9px] tracking-[0.4em] uppercase font-bold text-[#94A187] hover:text-white transition-all text-left"
               >
-                {status === 'idle' ? 'Submit' : status === 'submitting' ? 'Processing...' : 'Signed Up'}
+                {status === 'idle' ? '' : status === 'submitting' ? 'Processing...' : 'Signed Up'}
               </button>
             </form>
           </div>
