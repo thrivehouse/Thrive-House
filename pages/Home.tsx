@@ -51,13 +51,9 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <section className="relative h-[100vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=2400" 
-            alt="Sophisticated fine art drawing of a social gathering" 
-            className="w-full h-full object-cover opacity-[0.25] grayscale-[0.8] scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D110E]/80 via-transparent to-[#0D110E]"></div>
-          <div className="absolute inset-0 image-overlay"></div>
+          <div className="absolute inset-0 bg-[#0D110E]"></div>
+          {/* Subtle noise/texture overlay via CSS if desired, but keeping it clean as per request */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D110E] via-transparent to-[#0D110E] opacity-50"></div>
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-5xl pt-32 md:pt-40 animate-in fade-in slide-in-from-bottom-12 duration-[1200ms]">
@@ -91,33 +87,25 @@ const Home: React.FC = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-32 md:py-48 px-6 bg-[#0D110E] relative overflow-hidden">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-          <div className="space-y-12">
-            <h2 className="text-4xl md:text-7xl font-serif text-[#E5E7E4] leading-[0.95]">Connection is <br/><span className="italic text-[#94A187]">intentional</span>.</h2>
-            <p className="text-neutral-500 font-light leading-loose text-lg max-w-lg">
+      <section className="py-32 md:py-48 px-6 bg-[#0D110E] relative overflow-hidden border-t border-white/5">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="space-y-16">
+            <h2 className="text-5xl md:text-8xl font-serif text-[#E5E7E4] leading-[0.95]">Connection is <br/><span className="italic text-[#94A187]">intentional</span>.</h2>
+            <p className="text-neutral-500 font-light leading-loose text-xl max-w-2xl mx-auto">
               Most social lives are built around habits that cost you your clarity. We believe evenings should give something back. Thrive House is designed for those who value depth, curation, and the shared commitment to living fully.
             </p>
-            <div className="grid grid-cols-2 gap-10 pt-8">
-              <div className="space-y-3">
-                <Moon className="w-6 h-6 text-[#94A187]" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pt-12 max-w-3xl mx-auto">
+              <div className="space-y-4 text-center md:text-left">
+                <Moon className="w-6 h-6 text-[#94A187] mx-auto md:mx-0" />
                 <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Cadence</h4>
-                <p className="text-xs text-neutral-500 leading-relaxed font-light">Intimate flagship gatherings held in private lofts, galleries, and botanical studios.</p>
+                <p className="text-sm text-neutral-500 leading-relaxed font-light">Intimate flagship gatherings held in private lofts, galleries, and botanical studios.</p>
               </div>
-              <div className="space-y-3">
-                <ShieldCheck className="w-6 h-6 text-[#94A187]" />
+              <div className="space-y-4 text-center md:text-left">
+                <ShieldCheck className="w-6 h-6 text-[#94A187] mx-auto md:mx-0" />
                 <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Standard</h4>
-                <p className="text-xs text-neutral-500 leading-relaxed font-light">Hand-vetted membership ensuring every seat at the table is occupied by a contributor.</p>
+                <p className="text-sm text-neutral-500 leading-relaxed font-light">Hand-vetted membership ensuring every seat at the table is occupied by a contributor.</p>
               </div>
             </div>
-          </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-white/5 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 bg-[#1A1F1B]">
-            <img 
-              src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80&w=1200" 
-              alt="Minimalist pencil drawing of intimate human connection" 
-              className="w-full h-full object-cover opacity-60"
-            />
-            <div className="absolute inset-0 bg-[#0D110E]/40"></div>
           </div>
         </div>
       </section>
@@ -158,33 +146,15 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Visual Grid - Centered Trio of Sophisticated Drawings */}
-      <section className="flex flex-col md:flex-row h-[50vh] md:h-[55vh] w-full gap-px bg-white/5 overflow-hidden justify-center items-stretch bg-[#0D110E]">
-        <div className="flex-1 max-w-[500px] overflow-hidden bg-[#121613]">
-          <img 
-            src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800" 
-            className="w-full h-full object-cover grayscale opacity-30 hover:opacity-100 transition-all duration-1000" 
-            alt="Architectural line drawing of an elite interior" 
-          />
-        </div>
-        <div className="flex-1 max-w-[500px] overflow-hidden bg-[#121613]">
-          <img 
-            src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&q=80&w=800" 
-            className="w-full h-full object-cover grayscale opacity-30 hover:opacity-100 transition-all duration-1000" 
-            alt="Classical pencil sketch of a social group" 
-          />
-        </div>
-        <div className="flex-1 max-w-[500px] overflow-hidden bg-[#121613]">
-          <img 
-            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800" 
-            className="w-full h-full object-cover grayscale opacity-30 hover:opacity-100 transition-all duration-1000" 
-            alt="Minimalist ink drawing of cultural objects" 
-          />
+      {/* Spacing Section instead of Visual Grid */}
+      <section className="py-24 bg-[#0D110E]">
+        <div className="container mx-auto px-6">
+          <div className="h-px w-full bg-white/5"></div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-40 px-6 text-center bg-[#0D110E] border-t border-white/5">
+      <section className="py-40 px-6 text-center bg-[#0D110E]">
         <h2 className="text-5xl md:text-[8rem] font-serif mb-12 text-[#E5E7E4] leading-none opacity-90">Choose <span className="italic text-[#94A187]">Depth</span>.</h2>
         <p className="text-neutral-400 mb-16 max-w-xl mx-auto font-light text-xl italic">
           An evening society for those who seek to belong without compromise.
