@@ -7,21 +7,21 @@ const experiences = [
     title: "Flagship Evenings",
     focus: "Intimacy",
     description: "Our signature monthly gatherings. Held in nomadic spaces—from hidden lofts to private art galleries—these evenings are designed around curated dialogue and botanical elixirs.",
-    image: "https://images.unsplash.com/photo-1559339352-11d035aa75de?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200",
     icon: MessageSquare
   },
   {
     title: "Member Directory",
     focus: "Curation",
     description: "Membership grants entry into a vetted directory of thinkers, creatives, and leaders. We facilitate purposeful introductions that extend well beyond our physical gatherings.",
-    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200",
     icon: Users
   },
   {
     title: "Private Salons",
     focus: "Home Rituals",
     description: "Members have the opportunity to host 'Certified' society evenings. We curate the guest list and provide the conversation prompts; you host the ritual in the comfort of your home.",
-    image: "https://images.unsplash.com/photo-1594631252845-29fc458695d7?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200",
     icon: HomeIcon
   }
 ];
@@ -61,9 +61,10 @@ const Experience: React.FC = () => {
                 <img 
                   src={exp.image} 
                   alt={exp.title} 
-                  className="w-full h-full object-cover grayscale opacity-40 transition-all duration-[2000ms] group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+                  className="w-full h-full object-cover grayscale opacity-20 transition-all duration-[2000ms] group-hover:opacity-60 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-[#94A187]/5 mix-blend-color"></div>
+                <div className="absolute inset-0 border-[0.5px] border-white/5 m-4"></div>
               </div>
             </div>
           ))}

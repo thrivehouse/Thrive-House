@@ -35,12 +35,12 @@ const Flyer: React.FC = () => {
           </h1>
         </div>
 
-        {/* Hero Image Block */}
-        <div className="relative flex-grow mb-12 overflow-hidden border border-white/5 grayscale group-hover:grayscale-0 transition-all duration-1000">
+        {/* Hero Illustration Block */}
+        <div className="relative flex-grow mb-12 overflow-hidden border border-white/5 group">
           <img 
-            src="https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&q=80&w=1200" 
-            alt="Warm candlelit atmosphere"
-            className="w-full h-full object-cover opacity-60 scale-110 group-hover:scale-100 transition-transform duration-[3000ms]"
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200" 
+            alt="Hand-drawn architectural illustration of friends at dinner"
+            className="w-full h-full object-cover grayscale opacity-20 scale-110 group-hover:scale-100 transition-transform duration-[3000ms] group-hover:opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D110E]/20 to-[#0D110E]"></div>
           
