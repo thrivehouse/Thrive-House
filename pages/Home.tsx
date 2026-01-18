@@ -52,10 +52,11 @@ const Home: React.FC = () => {
       <section className="relative h-[100vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=2400" 
-            alt="Minimalist architectural interior with soft lighting" 
-            className="w-full h-full object-cover opacity-25 grayscale-[0.2]"
+            src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=2400" 
+            alt="Sophisticated fine art drawing of a social gathering" 
+            className="w-full h-full object-cover opacity-[0.25] grayscale-[0.8] scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0D110E]/80 via-transparent to-[#0D110E]"></div>
           <div className="absolute inset-0 image-overlay"></div>
         </div>
         
@@ -110,13 +111,13 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-white/5 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-white/5 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000 bg-[#1A1F1B]">
             <img 
-              src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200" 
-              alt="Intimate connection in a sophisticated evening setting" 
-              className="w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?auto=format&fit=crop&q=80&w=1200" 
+              alt="Minimalist pencil drawing of intimate human connection" 
+              className="w-full h-full object-cover opacity-60"
             />
-            <div className="absolute inset-0 bg-[#0D110E]/20"></div>
+            <div className="absolute inset-0 bg-[#0D110E]/40"></div>
           </div>
         </div>
       </section>
@@ -157,27 +158,27 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Visual Grid - Centered Trio of Upscale Visuals */}
-      <section className="flex flex-col md:flex-row h-[50vh] md:h-[55vh] w-full gap-px bg-white/5 overflow-hidden justify-center items-stretch">
-        <div className="flex-1 max-w-[500px] overflow-hidden">
+      {/* Visual Grid - Centered Trio of Sophisticated Drawings */}
+      <section className="flex flex-col md:flex-row h-[50vh] md:h-[55vh] w-full gap-px bg-white/5 overflow-hidden justify-center items-stretch bg-[#0D110E]">
+        <div className="flex-1 max-w-[500px] overflow-hidden bg-[#121613]">
           <img 
-            src="https://images.unsplash.com/photo-1544787210-221274435144?auto=format&fit=crop&q=80&w=800" 
-            className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-opacity duration-1000" 
-            alt="Refined botanical tea ritual" 
+            src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800" 
+            className="w-full h-full object-cover grayscale opacity-30 hover:opacity-100 transition-all duration-1000" 
+            alt="Architectural line drawing of an elite interior" 
           />
         </div>
-        <div className="flex-1 max-w-[500px] overflow-hidden">
+        <div className="flex-1 max-w-[500px] overflow-hidden bg-[#121613]">
           <img 
-            src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800" 
-            className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-opacity duration-1000" 
-            alt="Sophisticated connection and dining culture" 
+            src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&q=80&w=800" 
+            className="w-full h-full object-cover grayscale opacity-30 hover:opacity-100 transition-all duration-1000" 
+            alt="Classical pencil sketch of a social group" 
           />
         </div>
-        <div className="flex-1 max-w-[500px] overflow-hidden">
+        <div className="flex-1 max-w-[500px] overflow-hidden bg-[#121613]">
           <img 
-            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=800" 
-            className="w-full h-full object-cover grayscale opacity-40 hover:opacity-100 transition-opacity duration-1000" 
-            alt="Cultured library and intellectual space" 
+            src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800" 
+            className="w-full h-full object-cover grayscale opacity-30 hover:opacity-100 transition-all duration-1000" 
+            alt="Minimalist ink drawing of cultural objects" 
           />
         </div>
       </section>
