@@ -5,7 +5,7 @@ import React, { useState, useRef } from 'react';
  * GOOGLE SHEETS INTEGRATION
  * Target: Column A (fullName), Column B (email), Column C (chapter), Column D (importantExperience)
  */
-const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbypeQJ7ZeLOTJV-Ig8KB3TiPoyP7VIqtG1-S0DXtZUfmkYeW2lAWlfftFcEuT0hLpo3dQ/exec';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyXiHhn_eCaoZ7lM_yow9-60JT_Ojy_47j7I3OYFSLGWw7IqhOkc2jIZcbF6DOa3Yi5wg/exec';
 
 const Apply: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
