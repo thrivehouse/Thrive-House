@@ -52,7 +52,6 @@ const Home: React.FC = () => {
       <section className="relative h-[100vh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[#0D110E]"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D110E] via-transparent to-[#0D110E] opacity-50"></div>
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-5xl pt-32 md:pt-40 animate-in fade-in slide-in-from-bottom-12 duration-[1200ms]">
@@ -85,46 +84,31 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Philosophy Section with Curated Illustration */}
+      {/* Philosophy Section - Text Only */}
       <section className="py-32 md:py-48 px-6 bg-[#0D110E] relative overflow-hidden border-t border-white/5">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="space-y-16">
-              <h2 className="text-5xl md:text-8xl font-serif text-[#E5E7E4] leading-[0.95]">Connection is <br/><span className="italic text-[#94A187]">intentional</span>.</h2>
-              <p className="text-neutral-500 font-light leading-loose text-xl max-w-2xl">
-                Most social lives are built around habits that cost you your clarity. We believe evenings should give something back. Thrive House is designed for those who value depth, curation, and the shared commitment to living fully.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-4">
-                <div className="space-y-4">
-                  <Moon className="w-6 h-6 text-[#94A187]" />
-                  <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Cadence</h4>
-                  <p className="text-sm text-neutral-500 leading-relaxed font-light">Intimate gatherings held in private lofts and botanical studios.</p>
-                </div>
-                <div className="space-y-4">
-                  <ShieldCheck className="w-6 h-6 text-[#94A187]" />
-                  <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Standard</h4>
-                  <p className="text-sm text-neutral-500 leading-relaxed font-light">Hand-vetted membership ensuring every seat is occupied by a contributor.</p>
-                </div>
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-16">
+            <h2 className="text-5xl md:text-8xl font-serif text-[#E5E7E4] leading-[0.95]">Connection is <br/><span className="italic text-[#94A187]">intentional</span>.</h2>
+            <p className="text-neutral-500 font-light leading-loose text-xl mx-auto max-w-2xl">
+              Most social lives are built around habits that cost you your clarity. We believe evenings should give something back. Thrive House is designed for those who value depth, curation, and the shared commitment to living fully.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12 text-left border-t border-white/5 pt-20">
+              <div className="space-y-4">
+                <Moon className="w-6 h-6 text-[#94A187]" />
+                <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Cadence</h4>
+                <p className="text-sm text-neutral-500 leading-relaxed font-light">Intimate gatherings held in private lofts and botanical studios. No crowds, no noise.</p>
               </div>
-            </div>
-            
-            {/* Curated Aesthetic Illustration: Group of Friends at Dinner (Hand-Drawn Style) */}
-            <div className="group relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-[#1A1F1B] border border-white/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
-              <img 
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200" 
-                alt="Sophisticated hand-drawn illustration of friends gathered around a dinner table in soft candlelight"
-                className="w-full h-full object-cover grayscale opacity-30 group-hover:opacity-60 transition-all duration-[2000ms] ease-out scale-110 group-hover:scale-100"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D110E]/70 via-transparent to-transparent opacity-80"></div>
-              <div className="absolute bottom-10 left-10 right-10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                <p className="text-white text-[10px] tracking-[0.4em] uppercase font-bold">The Society Table.</p>
+              <div className="space-y-4">
+                <ShieldCheck className="w-6 h-6 text-[#94A187]" />
+                <h4 className="text-[11px] font-bold tracking-widest uppercase text-white">The Standard</h4>
+                <p className="text-sm text-neutral-500 leading-relaxed font-light">Hand-vetted membership ensuring every seat is occupied by a contributor.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Model Section - THREE PILLARS */}
+      {/* Model Section */}
       <section className="py-32 px-6 border-y border-white/5 bg-[#121613]">
         <div className="container mx-auto">
           <div className="mb-24 flex flex-col md:flex-row justify-between items-end gap-10">
@@ -160,17 +144,10 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Spacing Section */}
-      <section className="py-24 bg-[#0D110E]">
-        <div className="container mx-auto px-6">
-          <div className="h-px w-full bg-white/5"></div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-40 px-6 text-center bg-[#0D110E]">
         <h2 className="text-5xl md:text-[8rem] font-serif mb-12 text-[#E5E7E4] leading-none opacity-90">Choose <span className="italic text-[#94A187]">Depth</span>.</h2>
-        <p className="text-neutral-400 mb-16 max-w-xl mx-auto font-light text-xl italic">
+        <p className="text-neutral-400 mb-16 max-w-xl mx-auto font-light text-xl italic leading-relaxed">
           An evening society for those who seek to belong without compromise.
         </p>
         <Link 

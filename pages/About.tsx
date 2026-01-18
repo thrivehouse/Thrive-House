@@ -23,7 +23,7 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-24 mb-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-24 mb-40 border-y border-white/5 py-32">
           <div className="space-y-12">
             <h3 className="text-4xl md:text-5xl font-serif italic text-[#94A187]">Holistic Integrity</h3>
             <p className="text-neutral-400 font-light leading-loose text-lg">
@@ -36,18 +36,6 @@ const About: React.FC = () => {
               We celebrate the abundance of the evening: fine art, botanical soundscapes, and the rare gift of undivided attention. We believe the most powerful social experiences happen when you are in your peak state.
             </p>
           </div>
-        </div>
-
-        <div className="relative aspect-[16/7] mb-40 overflow-hidden rounded-sm border border-white/5 group">
-            <img 
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1600" 
-                alt="Architectural hand-drawing of friends at a dinner table"
-                className="w-full h-full object-cover grayscale opacity-20 group-hover:opacity-40 transition-all duration-[2000ms]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D110E] to-transparent"></div>
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
-                <span className="text-[10px] tracking-[0.8em] uppercase text-[#94A187] font-bold">The Shared Table</span>
-            </div>
         </div>
 
         <div className="max-w-3xl mx-auto text-center space-y-16 pb-24 border-b border-white/5">

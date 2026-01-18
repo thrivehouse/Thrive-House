@@ -2,13 +2,10 @@
 import React from 'react';
 
 const Flyer: React.FC = () => {
-  // Current URL for the QR code simulation
-  const siteUrl = window.location.origin + window.location.pathname;
-
   return (
     <div className="min-h-screen bg-[#050706] flex items-center justify-center p-6 md:p-12 pt-32 pb-20">
       {/* Flyer Container - A4ish Ratio */}
-      <div className="relative w-full max-w-[800px] aspect-[1/1.414] bg-[#0D110E] shadow-[0_0_100px_rgba(0,0,0,1)] border border-white/5 overflow-hidden flex flex-col p-12 md:p-20 group">
+      <div className="relative w-full max-w-[800px] aspect-[1/1.414] bg-[#0D110E] shadow-[0_0_100px_rgba(0,0,0,1)] border border-white/5 overflow-hidden flex flex-col p-12 md:p-24 group">
         
         {/* Decorative Corner Accents */}
         <div className="absolute top-8 left-8 w-12 h-[1px] bg-[#94A187]/30"></div>
@@ -21,40 +18,28 @@ const Flyer: React.FC = () => {
         <div className="absolute bottom-8 right-8 w-[1px] h-12 bg-[#94A187]/30"></div>
 
         {/* Header Label */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-24">
           <span className="text-[#94A187] text-[10px] md:text-[12px] font-bold tracking-[0.8em] uppercase">
             A Private Evening Society
           </span>
         </div>
 
         {/* Main Title */}
-        <div className="text-center mb-12">
-          <h1 className="text-6xl md:text-8xl font-serif text-white leading-tight tracking-tight italic">
+        <div className="text-center mb-20">
+          <h1 className="text-6xl md:text-[6rem] font-serif text-white leading-[0.9] tracking-tight italic mb-8">
             The Evening, <br/>
             <span className="text-[#94A187]">Reclaimed.</span>
           </h1>
-        </div>
-
-        {/* Hero Illustration Block */}
-        <div className="relative flex-grow mb-12 overflow-hidden border border-white/5 group">
-          <img 
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=1200" 
-            alt="Hand-drawn architectural illustration of friends at dinner"
-            className="w-full h-full object-cover grayscale opacity-20 scale-110 group-hover:scale-100 transition-transform duration-[3000ms] group-hover:opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0D110E]/20 to-[#0D110E]"></div>
-          
-          {/* Overlay Text */}
-          <div className="absolute bottom-8 left-0 right-0 px-10 text-center">
-             <p className="text-white text-lg md:text-2xl font-serif italic tracking-wide">
-                "Depth over drinks."
-             </p>
-          </div>
+          <div className="w-16 h-[1px] bg-[#94A187]/50 mx-auto"></div>
         </div>
 
         {/* Copy Block */}
-        <div className="text-center space-y-8 mb-16">
-          <p className="text-neutral-400 font-light text-sm md:text-base max-w-lg mx-auto leading-relaxed tracking-wide">
+        <div className="text-center space-y-12 flex-grow flex flex-col justify-center">
+          <p className="text-white font-serif text-2xl md:text-3xl italic leading-relaxed tracking-wide max-w-md mx-auto">
+            "We believe evenings should give something back."
+          </p>
+          
+          <p className="text-neutral-400 font-light text-sm md:text-base max-w-lg mx-auto leading-loose tracking-wide italic">
             Thrive House is a grounded society for individuals who value deep connection, sustained vitality, and restorative evenings. Optimized for holistic health and those who prioritize tomorrow.
           </p>
           
@@ -66,7 +51,7 @@ const Flyer: React.FC = () => {
         </div>
 
         {/* Footer with QR Code */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12 mt-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12 mt-auto pt-24 border-t border-white/5">
           <div className="text-left hidden md:block">
             <div className="text-2xl font-light tracking-[0.2em] uppercase text-white mb-2">
               THRIVE <span className="text-[#94A187] italic">HOUSE</span>
@@ -79,8 +64,7 @@ const Flyer: React.FC = () => {
           <div className="flex flex-col items-center gap-4">
             {/* Elegant QR Placeholder */}
             <div className="p-2 border border-[#94A187]/30 bg-white/5 rounded-sm">
-              <div className="w-24 h-24 bg-white p-2">
-                {/* SVG QR CODE GENERATOR MOCK */}
+              <div className="w-20 h-20 bg-white p-2">
                 <svg viewBox="0 0 100 100" className="w-full h-full text-[#0D110E]">
                    <path fill="currentColor" d="M0 0h30v30H0zm40 0h20v20H40zm30 0h30v30H70zM0 40h20v20H0zm30 0h10v10H30zm20 0h10v10H50zm20 0h30v30H70zM0 70h30v30H0zm40 70h10v10H40zm20 0h10v10H60zm10 0h30v30H70z" />
                    <rect x="10" y="10" width="10" height="10" fill="currentColor" />
@@ -100,7 +84,7 @@ const Flyer: React.FC = () => {
           </div>
         </div>
 
-        {/* Print Instruction - Only visible on screen */}
+        {/* Print Instruction */}
         <div className="absolute top-4 right-4 md:opacity-0 group-hover:opacity-100 transition-opacity">
            <button 
              onClick={() => window.print()}
@@ -116,7 +100,7 @@ const Flyer: React.FC = () => {
           body * { visibility: hidden; }
           .min-h-screen, .min-h-screen * { visibility: visible; }
           .min-h-screen { position: absolute; left: 0; top: 0; padding: 0 !important; background: white; }
-          .max-w-[800px] { width: 100%; border: none; shadow: none; }
+          .max-w-[800px] { width: 100%; border: none; shadow: none; margin: 0 auto; }
           button { display: none !important; }
         }
       `}</style>
