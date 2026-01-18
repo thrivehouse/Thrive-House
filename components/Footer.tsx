@@ -1,41 +1,35 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
-// Replace this with your Google Apps Script Web App URL
-// Explicitly typed as string to resolve comparison overlap error with placeholder
-const GOOGLE_SHEET_URL: string = 'https://script.google.com/macros/s/AKfycbypeQJ7ZeLOTJV-Ig8KB3TiPoyP7VIqtG1-S0DXtZUfmkYeW2lAWlfftFcEuT0hLpo3dQ/exec';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbypeQJ7ZeLOTJV-Ig8KB3TiPoyP7VIqtG1-S0DXtZUfmkYeW2lAWlfftFcEuT0hLpo3dQ/exec';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'submitted'>('idle');
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  const handleNewsletter = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('submitting');
-    
-    try {
-      // Comparison is now valid between string and string literal
-      if (GOOGLE_SHEET_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-        await fetch(GOOGLE_SHEET_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          body: JSON.stringify({ email, type: 'newsletter', timestamp: new Date().toISOString() }),
-          headers: { 'Content-Type': 'application/json' }
-        });
-      } else {
-        await new Promise(r => setTimeout(r, 1000));
-      }
+  const handleIframeLoad = () => {
+    if (status === 'submitting') {
       setStatus('submitted');
       setEmail('');
-    } catch (e) {
-      console.error(e);
-      setStatus('idle');
+      setTimeout(() => setStatus('idle'), 5000);
     }
+  };
+
+  const handleFormSubmit = () => {
+    setStatus('submitting');
   };
 
   return (
     <footer className="py-32 border-t border-white/5 bg-[#0D110E]">
       <div className="container mx-auto px-6 md:px-12">
+        <iframe
+          name="newsletter_iframe"
+          ref={iframeRef}
+          style={{ display: 'none' }}
+          onLoad={handleIframeLoad}
+        ></iframe>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mb-20">
           <div className="lg:col-span-2 space-y-8">
             <div className="text-2xl font-light tracking-[0.3em] uppercase">
@@ -48,8 +42,16 @@ const Footer: React.FC = () => {
 
           <div className="space-y-6">
             <h4 className="text-[10px] tracking-[0.4em] uppercase font-bold text-white">Join the Waitlist</h4>
-            <form onSubmit={handleNewsletter} className="flex flex-col gap-4">
+            <form 
+              action={GOOGLE_SHEET_URL} 
+              method="POST" 
+              target="newsletter_iframe"
+              onSubmit={handleFormSubmit}
+              className="flex flex-col gap-4"
+            >
+              <input type="hidden" name="type" value="newsletter" />
               <input 
+                name="email"
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
