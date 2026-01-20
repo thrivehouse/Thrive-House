@@ -1,43 +1,38 @@
-
-import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import About from './pages/About';
-import Experience from './pages/Experience';
-import Membership from './pages/Membership';
-import Apply from './pages/Apply';
-import Flyer from './pages/Flyer';
-import Footer from './components/Footer';
-
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-};
-
-const App: React.FC = () => {
+function App() {
   return (
-    <HashRouter>
-      <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-[#0D110E] text-[#E5E7E4] selection:bg-[#94A187] selection:text-[#0D110E]">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/membership" element={<Membership />} />
-            <Route path="/apply" element={<Apply />} />
-            <Route path="/flyer" element={<Flyer />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </HashRouter>
+    <div style={{ maxWidth: "500px", margin: "80px auto", textAlign: "center", fontFamily: "sans-serif" }}>
+      <h1>Interested in alcohol-free social events?</h1>
+
+      <p>
+        We’re exploring alcohol-free evenings focused on real connection.
+        Scan the code, leave your email, and we’ll keep you in the loop.
+      </p>
+
+      <form>
+        <input
+          type="email"
+          placeholder="Your email"
+          style={{
+            padding: "12px",
+            width: "100%",
+            marginBottom: "12px",
+            fontSize: "16px"
+          }}
+        />
+        <button
+          type="submit"
+          style={{
+            padding: "12px",
+            width: "100%",
+            fontSize: "16px",
+            cursor: "pointer"
+          }}
+        >
+          Notify me
+        </button>
+      </form>
+    </div>
   );
-};
+}
 
 export default App;
